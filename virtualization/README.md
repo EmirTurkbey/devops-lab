@@ -38,14 +38,14 @@ Physical Host (Ubuntu Linux)
 
 ## 3. Environment Details
 
-| Component | Description |
-|------------|-------------|
-| Host OS | Ubuntu Linux |
-| Virtualization | KVM + libvirt |
-| Management | Cockpit |
-| Guest OS | Ubuntu Server 22.04 |
-| Network | NAT (default libvirt network) |
-| Access | SSH (key-based authentication) |
+| Component | Description |  
+|------------|-------------|  
+| Host OS | Ubuntu Linux |  
+| Virtualization | KVM + libvirt |  
+| Management | Cockpit |  
+| Guest OS | Ubuntu Server 22.04 |  
+| Network | NAT (default libvirt network) |  
+| Access | SSH (key-based authentication) |  
 
 ---
 
@@ -99,8 +99,9 @@ virsh start <vm-name>
 ```
 
 Console access:
-
+```bash
 virsh console <vm-name>
+```
 
 ### 6. SSH Setup
 Generate SSH Key (Host)
@@ -121,9 +122,9 @@ ssh user@<vm-ip>
 ### 7. SSH Hardening
 
 Edit SSH configuration on VM:
-
+```bash
 sudo nano /etc/ssh/sshd_config
-
+```
 
 Set:
 
@@ -132,9 +133,9 @@ PermitRootLogin no
 
 
 Restart SSH:
-
+```bash
 sudo systemctl restart ssh
-
+```
 
 This enforces key-based authentication only.
 
@@ -168,3 +169,4 @@ Limitations:
 No direct LAN exposure
 
 Port forwarding required for external access
+
