@@ -2,9 +2,9 @@
 
 ## Overview
 
-This repository demonstrates provisioning a basic Amazon VPC using Terraform.
+This repository demonstrates provisioning a basic Amazon VPC using Terraform.  
 
-The project focuses on:
+The project focuses on:  
 
 - Terraform initialization  
 - AWS provider configuration  
@@ -81,6 +81,7 @@ Remove (terminate) created infrastructure:
 ```bash
 terraform destory
 ```
+
 
 
 
